@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANCAVE- Men supporting Men</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <!-- nav -->
     <nav class="navbar">
     <img class="logo"  src="img/cropped-mancav-logo-white-500-150x25.png" alt="">
-     <ul class="navlinks">
+     <ul class="nav-links" id="nav-links">
         <li class="home"><a href="#"></a>Home</li>
         <li><a href="#"></a>Tours</li>
         <li><a href="#"></a>Explore</li>
         <li><a href="#"></a>About</li>
         <li><a href="#footer"></a>Contact</li>
      </ul>
-     <a href="" target="_blank"><img src="img/menu-btn.png" alt="" class="menubutton"></a>
+     <button onclick="button()"> <img src="img/menu-btn.png" alt="" class="menu-btn"></button>
     </nav>
-
-    <div class="header">
+<header>
     <div class="headercontent">
         <h2>Explore The Colorfull World</h2>
         <div class="line"></div>
@@ -28,7 +28,9 @@
         <a href="#" class="ctn">learn More</a>
       
     </div>
-</div>
+</header>
+
+
 <!--events-->
 <section class="events">
     <div class="title">
@@ -86,6 +88,16 @@
 
 </section>
 
-    
+<script>
+        function button() {
+            var menu = document.getElementById("nav-links");
+            if (menu.style.marginTop === "0px") {
+                menu.style.marginTop = "-900px";
+            } else {
+                menu.style.marginTop = "0px";
+            }
+        }
+    </script>
+</script>
 </body>
 </html>

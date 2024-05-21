@@ -23,11 +23,12 @@ body ,html{
 ul{
     list-style: none;
 }
-.navlinks{
+.nav-links{
     display: flex;
     align-items: center;
+    
 }
-.navlinks li{
+.nav-links li{
     margin: 0 30px;
 }
 .home{
@@ -37,7 +38,7 @@ ul{
 
 }
 
-.header{
+header{
     width: 100vw;
     height: 100vh;
     background-image: url(img/header-bg.png);
@@ -79,7 +80,7 @@ a{
     background:#f7198f ;
     color: #fff;
 }
-.menubutton{
+.menu-btn{
     position: absolute;
     top: 30px;
     right: 30px;
@@ -232,10 +233,13 @@ li:hover{
     cursor: zoom-out;
     
 }
+button{
+    display: none;
+}
 
 
 /*for mobiles*/
-@media (max-width:850px) {
+@media  (max-width:850px) {
     .navbar{
         padding: 0;
     }
@@ -245,19 +249,27 @@ li:hover{
         left: 30px;
 
     }
-    .navlinks{
+    button{
+        display: initial;
+    }
+    .nav-links{
         flex-direction: column;
         width: 100%;
         height: 100vh;
         justify-content: center;
         background: black;
         margin-top: -900px;
+        transition: 0.5s ease;
     }
-    .navlinks li{
+    .mobile-menue{
+        margin-top: 0px;
+    }
+    .nav-links li{
         margin: 30px auto;
     }
-    .menubutton{
+    .menu-btn{
         display:initial;
+    
     }
     /*events*/
     .row{
